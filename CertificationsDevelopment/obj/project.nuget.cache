@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RTWftrTKGhl8q3ZWRWlR2/sXz9EVh+LZItYtsEQYWL14+REhjq+44IqzjsTDI+Ex9r0fx5nzxTvqpk7ZpbVa1w==",
+  "dgSpecHash": "n62529IeciVhGYgmDG00HRiCuGpwbitLlvs/hD0uugt+MJX3RRPuhaG1FQrQf0MWfIWPCeHaS717qSjG1QDyvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\stian\\source\\repos\\CertificationsProduct\\CertificationsDevelopment\\CertificationsDevelopment.csproj",
+  "projectFilePath": "C:\\Users\\stian\\source\\repos\\.NET Repos\\Certify\\Certify\\CertificationsDevelopment\\CertificationsDevelopment.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stian\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.2\\microsoft.aspnetcore.cryptography.internal.3.1.2.nupkg.sha512",
     "C:\\Users\\stian\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.2\\microsoft.aspnetcore.cryptography.keyderivation.3.1.2.nupkg.sha512",
