@@ -1,0 +1,91 @@
+﻿@{
+	ViewData["Title"] = "Details";
+}
+@model CertificationsModel
+@using Newtonsoft.Json
+<script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+<div class="DetailsHeader">
+	<h1>@Model.CertName</h1>
+	<h6>@Model.CertDescription</h6>
+</div>
+
+<link href="~/css/SearchPage.css" rel="stylesheet" />
+<link href="~/css/ListCertifications.css" rel="stylesheet" />
+<link href="~/css/CertificationDetails.css" rel="stylesheet" />
+
+<table class="table">
+	<thead id="TableDefiner">
+		<tr id="TableRowDefiner">
+			<th>Site</th>
+			<th>Subject</th>
+			<th>Author</th>
+			<th>Posted</th>
+		</tr>
+
+
+	</thead>
+
+	<tr>
+		<td>
+			<p><em>@Model.CertSite</em></p>
+		</td>
+		<td>
+			<p><em>@Model.CertSubject</em></p>
+		</td>
+		<td>
+			<p><em>@Model.Author</em></p>
+		</td>
+		<td>
+			<p><em>@Model.Posted</em></p>
+		</td>
+	</tr>
+</table>
+<img src="@Model.CertUrl" class="img-fluid" id="image" />
+<br />
+<canvas id="pdf"></canvas>
+
+
+<script>
+	var pdfData = atob('@Html.Raw(JsonConvert.DeserializeObject(ViewBag.story))');
+	// Loaded via <script> tag, create shortcut to access PDF.js exports.
+	var pdfjsLib = window['pdfjs-dist/build/pdf'];
+
+	// The workerSrc property shall be specified.
+	pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+
+	// Using DocumentInitParameters object to load binary data.
+	var loadingTask = pdfjsLib.getDocument({ data: pdfData });
+	loadingTask.promise.then(function (pdf) {
+		console.log('PDF loaded');
+
+		// Fetch the first page
+		var pageNumber = 1;
+		pdf.getPage(pageNumber).then(function (page) {
+			console.log('Page loaded');
+
+			var scale = 1.5;
+			var viewport = page.getViewport({ scale: scale });
+
+			// Prepare canvas using PDF page dimensions
+			var canvas = document.getElementById('pdf');
+			var context = canvas.getContext('2d');
+			canvas.width = viewport.width;
+			canvas.height = viewport.height;
+
+			// Render PDF page into canvas context
+			var renderContext = {
+				canvasContext: context,
+				viewport: viewport
+			};
+			var renderTask = page.render(renderContext);
+			renderTask.promise.then(function () {
+				document.getElementById("image").style.display = "none";
+				console.log('Page rendered');
+			});
+		});
+	}, function (reason) {
+		// PDF loading error
+			console.error(reason);
+	});
+</script>

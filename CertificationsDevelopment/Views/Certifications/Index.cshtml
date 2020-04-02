@@ -1,0 +1,98 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+	ViewData["Title"] = "Index";
+}
+@model SearchModel
+
+	<link href="~/css/SearchPage.css" rel="stylesheet" />
+	<link href="~/css/ListCertifications.css" rel="stylesheet" />
+
+<div class="CertificationsHeader">
+	@if (TempData["Error"] != null) {
+		<div class="alert alert-info">@TempData["Error"].ToString()</div>
+	}
+	<div class="CertificationsHeaderText">
+		<h1>Search certifcations</h1>
+		<h6>by default 'stianhave@hotmai.com' will be shown!</h6>
+		<p>You can find certifications by searching for name or a full email adress</p>
+	</div>
+	<div class="CertificationsHeaderSearch">
+		<form method="get" class="form-inline">
+			<input class="input-group-text input-group-lg widerInput" type="search" asp-for="search" />
+			<button class="myButton">Search</button>
+		</form>
+	</div>
+</div>
+
+@if (Model.profile != null) {
+
+	if (!Model.profile.IsPrivate) {
+
+		<div class="ProfileSearch">
+			<div class="ProfileSearchWrapper">
+
+				<div class="ProfileSearch-Image">
+					<a asp-action="ProfileDetails" asp-route-id="@Model.profile.ProfileId" asp-controller="Profile">
+						<img src="@Model.profile.ProfileImageUrl" alt="Alternate Text" />
+					</a>
+				</div>
+
+				<div class="ProfileSearch-Content">
+					<p>@Model.profile.FirstName @Model.profile.LastName </p>
+					<p>@Model.profile.Occupation</p>
+					<p id="About">@Model.profile.about</p>
+				</div>
+
+			</div>
+		</div>
+
+	} else {
+		<div class="ProfileSearch">
+			<div class="ProfileSearchWrapper">
+
+				<div class="ProfileSearch-Image">
+						<img src="https://www.flaticon.com/premium-icon/icons/svg/924/924917.svg" alt="" />
+				</div>
+
+				<div style="text-align: center" class="ProfileSearch-Content">
+					<p>This profile is private</p>
+				</div>
+
+			</div>
+		</div>
+	}
+
+}
+<div class="TableWrapper">
+
+
+	<table class="table">
+
+	<thead id="TableDefiner">
+		<tr id="TableRowDefiner">
+			<th id="CertNameDefiner">Certification</th>
+			<th id="CertDescription">Description</th>
+			<th id="CertSubject">Subject</th>
+			<th id="CertSite">Site</th>
+			<th id="CertAuthor">Author</th>
+			<th id="CertView">View</th>
+		</tr>
+	</thead>
+
+		@foreach (var x in Model.Certifications) {
+			<tr>
+				<td id="CertName">@x.CertName</td>
+				<td id="CertDescription">@x.CertDescription</td>
+				<td id="CertSubject">@x.CertSubject</td>
+				<td id="CertSite">@x.CertSite</td>
+				<td id="CertAuthor">@x.Author</td>
+
+				<td id="CertView">
+					<a asp-controller="Certifications" asp-action="Details" asp-route-id="@x.Id" name="View">
+						<img src="~/play-button.png" />
+					</a>
+				</td>
+			</tr>
+		}
+	</table>
+</div>

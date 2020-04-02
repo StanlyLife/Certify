@@ -1,0 +1,19 @@
+﻿body {
+	background: rgb(64,64,64);
+	background: linear-gradient(0deg, rgba(64,64,64,1) 0%, rgb(0, 161, 202) 100%);
+}
+
+.CreateCertification h1 {
+	text-transform: uppercase;
+	font-family: arial;
+	text-align: center;
+	font-size: 2.5em;
+	color: var(--bg-color);
+	text-shadow: 2px 2px 2px var(--main-color);
+}
+
+@media only screen and (max-width: 900px) {
+	.CreateCertification h1 {
+		font-size: 1.25em;
+	}
+}

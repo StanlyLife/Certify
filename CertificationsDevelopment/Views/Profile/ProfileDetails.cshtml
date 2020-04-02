@@ -1,0 +1,81 @@
+﻿
+@model UserProfile
+@{
+	ViewData["Title"] = $"{Model.FirstName} {Model.LastName}'s profile";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/ListCertifications.css" rel="stylesheet" />
+<link href="~/css/Profile.css" rel="stylesheet" />
+<div class="ProfileWrapper">
+
+	<div class="ProfileDetails">
+
+		@if (TempData["Message"] != null) {
+			<span class="alert alert-success d-flex justify-content-center">@TempData["Message"].ToString()</span>
+		}
+		@if (TempData["Error"] != null) {
+			<span class="alert alert-danger d-flex justify-content-center">@TempData["Error"].ToString()</span>
+		}
+
+		<div class="ProfileHeader">
+
+			<h1>@Model.FirstName @Model.LastName</h1>
+		</div>
+
+		<div class="ProfileDetailsInfo">
+			<div class="ProfileDetailsInfoImage">
+				<img src="@Model.ProfileImageUrl" alt="" />
+			</div>
+			<div class="ProfileDetailsInfoInner">
+				<p> <span class="ProfileDescriber">Occupation: </span> <br />@Model.Occupation</p>
+				<p> <span class="ProfileDescriber">Website: </span><br />@Model.Website</p>
+				<p> <span class="ProfileDescriber">Contact: </span><br />@Model.user.Email</p>
+			</div>
+
+			<div class="ProfileDetailsInfoDescription">
+				<div class="ProfileDetailsInfoDescription-Inner-Wrapper">
+					<p>
+						@Model.about
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+<div class="TableWrapper">
+	<table class="table">
+
+
+		<thead id="TableDefiner">
+			<tr id="TableRowDefiner">
+				<th id="CertNameDefiner">Certification</th>
+				<th id="CertDescription">Description</th>
+				<th id="CertSubject">Subject</th>
+				<th id="CertSite">Site</th>
+				<th id="CertPosted">Posted</th>
+				<th id="CertView">View</th>
+			</tr>
+		</thead>
+
+		@foreach (var x in Model.Certifications) {
+			<tr>
+				<td>@x.CertName</td>
+				<td id="CertDescription">@x.CertDescription</td>
+				<td id="CertSubject">@x.CertSubject</td>
+				<td id="CertSite">@x.CertSite</td>
+				<td id="CertPosted">@x.Posted</td>
+				<td id="CertView">
+					<a asp-controller="Certifications" asp-action="Details" asp-route-id="@x.Id" name="View">
+						<img src="~/play-button.png" />
+					</a>
+				</td>
+			</tr>
+		}
+
+	</table>
+</div>
+</div>
+@* Amount of Certifications, see certifications href="" *@

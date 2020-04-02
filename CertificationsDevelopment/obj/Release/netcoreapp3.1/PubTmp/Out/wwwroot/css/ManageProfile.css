@@ -1,0 +1,160 @@
+﻿body {
+	background: rgb(255, 255, 255);
+	background: linear-gradient(0deg, rgb(236, 236, 236) 0%, rgb(219, 219, 219) 100%);
+}
+
+/*HEADER*/
+.TitleName {
+	width: 50vw;
+	margin: auto;
+	padding: 2vh 0;
+	text-transform: uppercase;
+	font-family: arial;
+	text-align: center;
+	color: var(--table-color);
+	border-bottom: 2px solid var(--second-color);
+}
+
+h6.TitleName {
+	width: 30vw;
+	margin: auto;
+	padding: 1vh 0;
+	text-transform: uppercase;
+	font-family: arial;
+	text-align: center;
+	color: var(--bg-color);
+	border-bottom: 1px solid var(--table-color);
+}
+
+/**/
+
+
+
+.ManageContainer {
+	display: flex;
+	justify-content: center;
+	width: 80vw;
+	margin: 2.5vh auto;
+	box-shadow: 10px 5px 39px -4px rgba(0,0,0,0.75);
+}
+
+.LeftProfileNav {
+	color: var(--main-color);
+}
+
+.LeftProfileNav {
+}
+
+	.LeftProfileNav ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+
+.nav-link:hover {
+	background-color: #333;
+	border-bottom: 5px solid #ffa900;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 2.5vh 0vw 2.5vh 0;
+	height: 5vh;
+	width: 20vw;
+	text-transform: uppercase;
+	font-family: arial;
+	background-color: var(--table-color);
+	border-bottom: 5px solid #aaa;
+}
+
+.col-md-6 {
+	display: flex;
+	flex-direction: column;
+	padding: 0 2.5vw 5vh 2.5vw;
+}
+
+	.col-md-6 h4 {
+		font-size: 1.5em;
+		color: Var(--table-color);
+		font-family: arial;
+		text-transform: uppercase;
+		text-align: center;
+		padding-bottom: 2vh;
+		border-bottom: 5px solid var(--bg-color);
+	}
+
+	.col-md-6 form {
+		display: flex;
+		flex-direction: column;
+		width: 50vw;
+		font-size: 1.25em;
+	}
+
+.custom-file {
+	color: black;
+	padding: .5vh;
+	width: 100%;
+}
+
+.col-md-6 textarea {
+	height: 8vh;
+}
+
+.form-row label {
+	color: Var(--table-color);
+	font-weight: 600;
+}
+
+.form-row {
+	border-bottom: none;
+}
+
+.ManageContainer a {
+	color: inherit;
+}
+
+.newActive {
+	border-bottom: 5px solid Var(--second-color);
+	color: Var(--second-color);
+	background-color: Var(--table-color);
+}
+
+.myInput {
+	box-shadow: none;
+	border: none;
+	background-color: #00000000;
+	border-bottom: 3px solid var(--table-color)
+}
+
+.myLabel {
+	font-size: .85em;
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+
+
+	.ManageContainer {
+		width: 90vw;
+		margin: 2.5vh auto;
+	}
+
+	.nav-link {
+		margin-left: 15px;
+		font-size: .75em;
+	}
+
+	.form-row label {
+		font-weight: 800;
+	}
+
+
+	.col-md-6 form {
+		width: 100%;
+		font-size: .7em;
+	}
+}

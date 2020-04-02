@@ -1,0 +1,105 @@
+﻿body {
+	overflow-y: hidden;
+}
+
+.TableWrapper {
+	padding: 5vh 3vw;
+	width: 80vw;
+	margin: auto;
+	font-size: 1.2em;
+}
+
+table {
+	display: flex;
+	flex-direction: column;
+	color: var(--table-color);
+	margin: auto;
+	border-collapse: collapse;
+	border-spacing: 15vh;
+	width: 100%;
+	font-family: arial;
+	text-align: center;
+}
+
+
+	table td {
+		width: 100%;
+		padding-top: 2.2vh;
+		padding-bottom: 2.2vh;
+		border-bottom: 3px solid #d3d3d3;
+		word-break: break-all;
+	}
+
+
+
+	table tr {
+		overflow: hidden;
+
+		display: flex;
+		flex-basis: 16.6%;
+		height: 7vh;
+	}
+
+#CertDescription {
+	overflow: hidden;
+}
+
+#CertName {
+	overflow: hidden;
+	text-align: left;
+}
+
+thead {
+	background-color: var(--table-color);
+	border-top: 5px solid var(--main-color);
+	padding: 1vh 5%;
+	width: 90%;
+	color: white;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+	thead tr {
+		display: flex;
+		width: 100%;
+	}
+
+	thead th {
+		display: flex;
+		flex-basis: 25%;
+		align-items: center;
+		justify-content: center;
+	}
+
+@media only screen and (max-width: 900px) {
+
+	.TableWrapper {
+		padding: 2vh 1vw;
+		width: 95vw;
+	}
+
+
+	tr td {
+		font-size: .5em;
+		width: 90vw;
+		height: 1vh;
+	}
+
+	#CertName {
+		font-weight: 700;
+	}
+
+	tr td img {
+		margin: 0;
+		padding: 0;
+		height: 1vh;
+	}
+
+	#CertDescription, #CertSite {
+		display: none;
+	}
+
+	#TableDefiner {
+		font-size: 15px;
+	}
+}
