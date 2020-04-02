@@ -8640,11 +8640,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\stian\\source\\repos\\CertificationsProduct\\CertificationsDevelopment\\CertificationsDevelopment.csproj",
+      "projectUniqueName": "C:\\Users\\stian\\source\\repos\\.NET Repos\\Certify\\Certify\\CertificationsDevelopment\\CertificationsDevelopment.csproj",
       "projectName": "CertificationsDevelopment",
-      "projectPath": "C:\\Users\\stian\\source\\repos\\CertificationsProduct\\CertificationsDevelopment\\CertificationsDevelopment.csproj",
+      "projectPath": "C:\\Users\\stian\\source\\repos\\.NET Repos\\Certify\\Certify\\CertificationsDevelopment\\CertificationsDevelopment.csproj",
       "packagesPath": "C:\\Users\\stian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\stian\\source\\repos\\CertificationsProduct\\CertificationsDevelopment\\obj\\",
+      "outputPath": "C:\\Users\\stian\\source\\repos\\.NET Repos\\Certify\\Certify\\CertificationsDevelopment\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -215,6 +215,10 @@ header {
 }
 
 @media only screen and (max-width: 900px) {
+	.navitem button {
+		padding: 0 2vw;
+	}
+
 	body {
 		padding-top: 6vh;
 		padding-bottom: 10vh;
@@ -232,7 +236,8 @@ header {
 	}
 
 	.navitem {
-		font-size: .5em;
+		font-size: .375em;
+		font-weight: 750;
 		word-break: normal;
 	}
 
