@@ -183,7 +183,7 @@ header {
 	flex-direction: column;
 }
 
-.alert {
+/*.alert {
 	margin: 0;
 	padding: .5vh 1vw;
 	display: flex;
@@ -206,11 +206,11 @@ header {
 	text-align: center;
 	width: 100%;
 	font-size: 1.25em;
-}
+}*/
 
 .text-danger {
 	text-transform: uppercase;
-	color: rgb(255, 0, 0);
+	color: rgb(255, 125, 0);
 	font-family: verdana;
 }
 
