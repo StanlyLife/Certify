@@ -1,0 +1,88 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Net
+@model UserProfile
+@{
+	ViewData["Title"] = "Manage profile";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	var user = Model.user;
+	var userId = WebUtility.UrlEncode(user.Id.ToString().ToLower());
+}
+<link href="~/css/ToggleSwitch.css" rel="stylesheet" />
+<link href="~/css/ManageProfile.css" rel="stylesheet" />
+<h2 class="TitleName">@ViewData["Title"]</h2>
+<h6 class="TitleName">@User.Identity.Name</h6>
+@if (TempData["Message"] != null) {
+	<span class="alert alert-success d-flex justify-content-center">@TempData["Message"].ToString()</span>
+}
+@if (TempData["Error"] != null) {
+	<span class="alert alert-danger d-flex justify-content-center">@TempData["Error"].ToString()</span>
+}
+<div class="ManageContainer">
+	<div class="LeftProfileNav">
+		<ul class="nav nav-pills flex-column">
+			<li class="nav-item"><a class="nav-link" asp-controller="profile" asp-action="ProfileDetails" asp-route-id="@Model.ProfileId">View Profile</a></li>
+			<li class="nav-item"><a class="nav-link newActive" id="profile" asp-controller="profile" asp-action="Manage" asp-route-userKey="@userId">Manage</a></li>
+			<li class="nav-item"><a class="nav-link" id="email" href="/Identity/Account/Manage/Email">Email</a></li>
+			<li class="nav-item"><a class="nav-link" id="change-password" href="/Identity/Account/Manage/ChangePassword">Password</a></li>
+		</ul>
+
+	</div>
+	<div class="col-md-6">
+
+		<h4>Profile</h4>
+
+
+
+		<div class="MangeProfileFormContainer">
+			<form method="post" enctype="multipart/form-data">
+				<div asp-validation-summary="All" class="text-danger"></div>
+				<div class="form-row">
+					<label asp-for="FirstName" class="myLabel">First name:</label>
+					<input asp-for="FirstName" class="myInput" />
+					<span asp-validation-for="Website" class="text-danger"></span>
+				</div>
+				<div class="form-row">
+					<label asp-for="LastName" class="myLabel">Last name:</label>
+					<input asp-for="LastName" class="myInput" />
+					<span asp-validation-for="Website" class="text-danger"></span>
+				</div>
+				<div class="form-row">
+					<label class="myLabel" asp-for="Website">Personal website:</label>
+					<input asp-for="Website" class="myInput" />
+				</div>
+				<div class="form-row">
+					<label class="myLabel" asp-for="Occupation">Occupation:</label>
+					<input asp-for="Occupation" class="myInput" />
+				</div>
+				<div class="form-row">
+					<label class="myLabel" asp-for="about">Write about yourself</label>
+					<textarea class="myInput" id="exampleFormControlTextarea1" rows="5" asp-for="about">
+					</textarea>
+				</div>
+				<div class="form-row">
+					<label class="myLabel" asp-for="ProfileImage">Profile image:</label>
+					<input  type="file" class="custom-file myInput myLabel" name="file" />
+				</div>
+				<div class="form-row">
+					<label class="myLabel">Private profile: </label>
+					<label class="switch">
+						@if (Model.IsPrivate) {
+							<input asp-for="IsPrivate" type="checkbox" name="privacy" value="true" checked>
+						} else {
+							<input asp-for="IsPrivate" type="checkbox" name="privacy" value="true">
+						}
+						<span class="slider round"></span>
+					</label>
+				</div>
+				<button type="submit" class="myButton">Save</button>
+			</form>
+		</div>
+
+
+	</div>
+</div>
+
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}

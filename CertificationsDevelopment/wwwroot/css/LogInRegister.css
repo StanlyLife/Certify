@@ -1,0 +1,122 @@
+﻿body {
+	background-color: #dbd9d9;
+}
+
+.Header {
+	text-align: center;
+	font-family: arial;
+	text-transform: uppercase;
+}
+
+.LogReg {
+	text-align: center;
+}
+
+.LogRegPart1 {
+	padding: 2.5vh 0vw;
+	box-shadow: 10px 5px 39px -4px rgba(0,0,0,0.75);
+	width: 50vw;
+	margin: auto;
+	background-color: #E8F0FE;
+}
+
+	.LogRegPart1 h4 {
+		font-family: arial;
+		color: var(--table-color);
+	}
+
+	.LogRegPart1 a {
+		font-family: arial;
+		color: #333;
+	}
+
+		.LogRegPart1 a:hover {
+			color: var(--third-color);
+		}
+
+.checkbox label input {
+	border: none;
+	height: 20px;
+	width: 20px;
+}
+
+.checkbox label {
+	font-family: arial;
+	height: 25px;
+	font-size: 25px;
+}
+
+.LogRegPart1 button {
+	width: 41.5vw;
+	height: 5vh;
+	border: none;
+	background-color: var(--table-color);
+	color: var(--main-color);
+	border-bottom: 3px solid;
+	text-transform: uppercase;
+	font-size: 1.25em;
+}
+
+	.LogRegPart1 button:hover {
+		background-color: var(--bg-color);
+		cursor: pointer;
+	}
+
+.field {
+	padding: 5vh 0;
+	height: 3vh;
+	display: flex;
+}
+
+	.field label {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		padding-left: 10vw;
+		text-transform: uppercase;
+		font-family: arial;
+		font-size: 1.25em;
+		height: 100%;
+		width: 25vw;
+		text-align: left;
+	}
+
+	.field input {
+		border: none;
+		margin: 0vh 4.5vw;
+		border-bottom: 2px solid var(--table-color);
+		padding: 0 1px;
+		height: 100%;
+		width: 30vw;
+	}
+
+
+.LoginPart2, .LogRegPart2 {
+	display: none; /*for login atleast*/
+}
+
+.RegisterPart1 input {
+	background-color: #E8F0FE;
+}
+
+@media only screen and (max-width: 900px) {
+
+	.field label {
+		font-size: 1em;
+	}
+
+	.LogRegPart1 {
+		width: 90vw;
+	}
+
+	.checkbox label input {
+		border: none;
+		height: 15px;
+		width: 15px;
+	}
+
+	.checkbox label {
+		height: 20px;
+		font-size: 20px;
+	}
+}

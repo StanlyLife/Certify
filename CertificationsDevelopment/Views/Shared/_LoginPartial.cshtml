@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using System.Net
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@if (SignInManager.IsSignedIn(User)) {
+	var user = UserManager.FindByNameAsync(User.Identity.Name);
+	var userId = WebUtility.UrlEncode(user.Result.Id.ToString().ToLower());
+
+
+	<li class="navitem">
+		<a class="" asp-controller="Profile" asp-action="Manage" asp-route-userKey="@userId" title="Manage">@User.Identity.Name</a>
+	</li>
+	<li class="navitem navitemlogout">
+		<form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+			<button type="submit" class="logout">Logout</button>
+		</form>
+	</li>
+} else {
+	<li class="navitem">
+		<a class="" asp-area="Identity" asp-page="/Account/Register">Register</a>
+	</li>
+	<li class="navitem">
+		<a class="" asp-area="Identity" asp-page="/Account/Login">Login</a>
+	</li>
+}
+

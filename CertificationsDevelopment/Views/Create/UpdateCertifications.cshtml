@@ -1,0 +1,67 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model CertificationsModel
+
+@{
+	ViewData["Title"] = "Create";
+}
+
+	<link href="~/css/EditCertification.css" rel="stylesheet" />
+<div class="CreateCertification">
+
+	<h1>@ViewData["Function"]</h1>
+		<div class="text-danger" asp-validation-summary="All"></div>
+
+		<form method="post" enctype="multipart/form-data">
+			<div class="text-danger" asp-validation-summary="All"></div>
+
+			<div class="form-row">
+				<label class="myLabel" asp-for="CertName">Name</label>
+				<input class="myInput" asp-for="CertName" />
+				<br />
+			</div>
+
+			<div class="form-row">
+				<label class="myLabel" asp-for="CertSubject">Subject</label>
+				<select class="myInput" asp-for="CertSubject" asp-items="@Html.GetEnumSelectList<Subject>()"></select>
+				<br />
+			</div>
+
+			<div class="form-row">
+				<label class="myLabel" asp-for="CertSite">Website</label>
+				<select class="myInput" asp-for="CertSubject" asp-items="@Html.GetEnumSelectList<Site>()"></select>
+				<br />
+			</div>
+
+			<div class="form-row">
+				<label class="myLabel" asp-for="CertDescription">Description</label>
+				<input type="text" class="myInput" asp-for="CertDescription" />
+				<br />
+			</div>
+
+			<div class="form-row">
+				<label class="myLabel" asp-for="CertUrl">Certification URL</label>
+				<input class="myInput" asp-for="CertUrl" />
+				<br />
+			</div>
+
+			<div class="form-row">
+				<label id="FileUpload1" class="myLabel">File upload</label>
+				<input id="upload" class="myFileInput" type="file" name="file" />
+			</div>
+
+			<button class="myButton">Submit</button>
+
+		</form>
+</div>
+<script>
+	function start() {
+		document.getElementById("upload").addEventListener("change", addActivityItem, false);
+	}
+
+	function addActivityItem() {
+		//option is selected
+		alert("File uploaded");
+	}
+
+	window.addEventListener("load", start, false);
+</script>

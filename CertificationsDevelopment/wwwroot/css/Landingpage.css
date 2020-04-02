@@ -1,0 +1,77 @@
+﻿body {
+	background-image: url(/Images/preset1.jpg);
+	background-size: 100%;
+	background-repeat: repeat-y;
+}
+
+
+.IndexWrapper {
+}
+
+.ImageWrapper {
+	padding-top: 2.5vh;
+	width: 100%;
+}
+
+.InnerImageWrapper {
+	width: 15%;
+	margin: auto;
+}
+
+	.InnerImageWrapper img {
+		width: 100%;
+		height: auto;
+	}
+
+.titleBox {
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	color: var(--second-color);
+	font-size: 1.15em;
+	font-family: arial;
+}
+
+	.titleBox h1 {
+		font-size: 2.5em;
+		text-transform: uppercase;
+		text-shadow: 7px 0px 0px rgba(62,62,62,0.9);
+	}
+
+	.titleBox p {
+		text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+	}
+
+/*auto text*/
+.typewrite {
+	color: var(--third-color);
+}
+
+	.typewrite span {
+	}
+
+
+@media only screen and (max-width: 900px) {
+	.titleBox {
+		width: 95%;
+	}
+
+		.titleBox h1 {
+			font-size: 1.55em;
+			text-transform: uppercase;
+			text-shadow: 3px 1px 1px rgba(62,62,62,1);
+		}
+
+		.titleBox p {
+			font-size: 1.25em;
+			text-shadow: 1px 1px 1px rgba(0,0,0,1);
+		}
+
+	.InnerImageWrapper {
+		width: 40%;
+	}
+
+	.ImageWrapper {
+		padding-top: 10vh;
+	}
+}

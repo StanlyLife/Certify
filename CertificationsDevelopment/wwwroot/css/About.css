@@ -1,0 +1,48 @@
+﻿body {
+	background-image: url(/Images/preset1.jpg);
+	background-size: 100%;
+	background-repeat: repeat-y;
+}
+
+.wrapper a:hover {
+	color: var(--third-color);
+}
+
+.wrapper a {
+	color: #7f7f7f;
+}
+
+.wrapper {
+	background-color: var(--table-color);
+	border-top: 15px solid var(--bg-color);
+	border-bottom: 25px solid var(--second-color);
+	box-shadow: 2px 2px 49px -6px rgba(0,0,0,0.75);
+	width: 55vw;
+	margin: auto;
+	margin-top: 15vh;
+	text-align: center;
+	font-family: arial;
+}
+
+	.wrapper h1 {
+		font-size: 2em;
+		padding: 1vh;
+		color: var(--main-color);
+	}
+
+	.wrapper p {
+		padding: 1vh;
+		font-size: 2em;
+		color: var(--second-color);
+		color: white;
+	}
+
+@media only screen and (max-width: 900px) {
+	.wrapper {
+		width: 75vw;
+	}
+
+		.wrapper p {
+			font-size: 1.25em;
+		}
+}
