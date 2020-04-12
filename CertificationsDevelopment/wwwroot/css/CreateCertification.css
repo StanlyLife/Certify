@@ -35,3 +35,24 @@
 	background: #fff;
 	color: black;
 }
+
+.CreateCertification h1 {
+	text-transform: uppercase;
+	font-family: arial;
+	text-align: center;
+	font-size: 2.5em;
+	color: #fff;
+	text-shadow: 2px 2px 2px #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 900px) {
+	.CreateCertification h1 {
+		font-size: 1em;
+	}
+
+	.CreateCertification form label {
+		font-size: .7em;
+	}
+}

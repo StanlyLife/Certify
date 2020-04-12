@@ -21,13 +21,13 @@ table {
 	text-align: center;
 }
 
-
 	table td {
 		width: 100%;
 		padding-top: 2.2vh;
 		padding-bottom: 2.2vh;
 		border-bottom: 3px solid #00000033;
-		word-break: break-all;
+		word-break: keep-all;
+		text-overflow: ellipsis;
 	}
 
 
