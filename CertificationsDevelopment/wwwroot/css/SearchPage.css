@@ -4,7 +4,8 @@
 .CertificationsHeader {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--second-color);
+	background: url("https://www.dishapublication.com/blog/wp-content/uploads/2019/10/666-6663236_blue-header-png-6-png-image-blue.png");
+	background-size: cover;
 	padding: 5vh;
 	border-bottom: 8px solid var(--main-color);
 	height: 35vh;
@@ -12,28 +13,30 @@
 
 
 
+
 .CertificationsHeaderText {
 	text-align: center;
-	color: white;
+	color: #00a6ff;
 	font-family: arial;
 }
 
-	.CertificationsHeaderText h1 {
-		padding: 0;
-		font-size: 3vw;
-		width: 30vw;
-		margin: auto;
-	}
+.CertificationsHeaderText h1 {
+	padding: 0;
+	font-size: 3vw;
+	width: 30vw;
+	margin: auto;
+}
 
-	.CertificationsHeaderText h6 {
-		color: var(--table-color);
-		margin: 1vh 0;
-		padding: 0;
-		font-size: 1.2em;
-	}
+.CertificationsHeaderText h6 {
+	color: #ffffff;
+	margin: 1vh 0;
+	padding: 0;
+	font-size: 1.2em;
+}
 
 .CertificationsHeader p {
-	color: var(--table-color);
+	/*#6a9abf*/
+	color: #ffffff;
 	width: 30vw;
 	margin: 0 auto 2.5vh auto;
 	height: auto;

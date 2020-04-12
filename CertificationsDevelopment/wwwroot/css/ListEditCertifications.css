@@ -6,7 +6,7 @@
 	font-family: arial;
 }
 
-.header h1, .header h5 {
-	color: White;
-	text-transform: uppercase;
-}
+	.header h1, .header h5 {
+		color: #05a6fd;
+		text-transform: uppercase;
+	}
