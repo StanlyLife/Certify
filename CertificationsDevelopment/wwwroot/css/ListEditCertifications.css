@@ -1,6 +1,7 @@
 ﻿.header {
-	background-color: var(--table-color);
-	padding: 1vh 0;
+	background: url("https://www.dishapublication.com/blog/wp-content/uploads/2019/10/666-6663236_blue-header-png-6-png-image-blue.png");
+	background-size: cover;
+	padding: 3vh 0;
 	margin: 0;
 	text-align: center;
 	font-family: arial;

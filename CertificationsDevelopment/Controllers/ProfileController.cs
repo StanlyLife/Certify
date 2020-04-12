@@ -103,6 +103,11 @@ namespace CertificationsDevelopment.Controllers
 				return RedirectToAction("index","home");
 			}
 
+			if (userProfile.ProfileImage == null) {
+				TempData["Message"] = "you need to update your profile to view it!";
+				return RedirectToAction("index", "home");
+			}
+
 			if (userProfile.IsPrivate) {
 				TempData["Message"] = "Your profile is private";
 			}

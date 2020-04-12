@@ -44,7 +44,10 @@ h6.TitleName {
 	border-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png") 30 stretch;
 }
 
+
 .LeftProfileNav {
+	/*Something wrong with ViewProfile*/
+	text-align: center;
 }
 
 .LeftProfileNav ul {

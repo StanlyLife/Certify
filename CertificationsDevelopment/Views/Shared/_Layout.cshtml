@@ -3,8 +3,32 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="Description" content="Upload, collect and save your certificates from websites such as udemy, linkedin learning, pluralsight, coursera and more">
+
 	<title>@ViewData["Title"] - MyCertificate</title>
 	<link rel="stylesheet" href="~/css/site.css" />
+
+	<!--FAVICONS-->
+
+	@*<link rel="apple-touch-icon" sizes="57x57" href="~/Favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="~/Favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="~/Favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="~/Favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="~/Favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="~/Favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="~/Favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="~/Favicon/apple-icon-152x152.png">*@
+	<link rel="icon" sizes="180x180" href="~/Favicon/apple-icon-180x180.png">
+	@*<link rel="icon" type="image/png" sizes="192x192" href="~/Favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="~/Favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="~/Favicon/favicon-96x96.png">*@
+	@*<link rel="manifest" href="~/Favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="~/Favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">*@
+	<!--End-->
+
+
 </head>
 <body>
 	<header>
@@ -12,7 +36,9 @@
 				<div class="navbar">
 					<ul>
 						<li class="navitem">
-							<a asp-area="" asp-controller="home" asp-action="Index">Home</a>
+							<a asp-area="" asp-controller="home" asp-action="Index">
+								<img src="~/Images/C.png" />
+							</a>
 						</li>
 						<li class="navitem">
 							<a asp-area="" asp-controller="Certifications" asp-action="Index">Certifications</a>
@@ -59,3 +85,20 @@
 	</div>
 </body>
 </html>
+
+<script>
+	let userHasScrolled = false;
+	let nav;
+	let i = 0;
+
+
+
+	window.onscroll = function (e) {
+		nav = document.getElementsByClassName("navbar");
+		if (!userHasScrolled) {
+			nav[0].style.animation = "fadeIn ease-in-out 3s forwards";
+		}
+		userHasScrolled = true;
+	}
+
+</script>

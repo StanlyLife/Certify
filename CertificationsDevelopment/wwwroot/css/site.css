@@ -145,9 +145,10 @@ header {
 }
 
 	.myButton:hover {
-		background-color: var(--hover-color);
+		border: 3px solid red;
+		background: linear-gradient(33deg,rgba(255, 125, 0, 0.3), rgba(255, 0, 238, 0.3));
+		border-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png") 30 stretch;
 	}
-
 
 .myInput {
 	padding-left: 1%;
@@ -175,9 +176,6 @@ header {
 	width: 75%;
 }
 
-.text-danger {
-
-}
 
 .CreateCertification {
 	width: 70vw;
@@ -192,12 +190,21 @@ header {
 	flex-direction: column;
 }
 
-.text-danger {
-	text-transform: uppercase;
-	color: rgb(255, 125, 0);
-	font-family: verdana;
+/*ALERTS AND ERRORS*/
+
+.validation-summary-errors {
+	margin-top: 1vh;
+	border: 2px solid red;
+	border-image: url("https://gameboss.eu/wp-content/uploads/2019/04/34-asana-color-gradient.jpg") 30 stretch;
+	padding: 2.5vh 0;
+	background-color: #33333382;
+	text-align: center;
 }
 
+.text-danger {
+	font-family: Arial;
+	color: white;
+}
 .alert {
 	background-color: #9e161680;
 	font-size: 2.5vh;
@@ -241,4 +248,45 @@ header {
 	.alert {
 		font-size: .85em;
 	}
+}
+
+/*ANIMATION*/
+@keyframes fadeIn {
+	0% {
+		background-color: rgba(51, 51, 51, 0);
+	}
+
+	100% {
+		background-color: rgba(51, 51, 51, 1);
+	}
+}
+
+
+
+/*SCROLLBAR*/
+
+::-webkit-scrollbar {
+	background: #333;
+}
+
+
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+}
+
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(#a700ff, #00fff7);
+	border-radius: 10px;
+}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: linear-gradient(#a700ff87, #00fff778);
+	}
+
+
+.navitem img {
+	max-width: 3em;
+	overflow: hidden;
 }
