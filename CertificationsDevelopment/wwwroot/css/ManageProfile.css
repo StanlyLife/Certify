@@ -11,8 +11,10 @@
 	text-transform: uppercase;
 	font-family: arial;
 	text-align: center;
-	color: var(--table-color);
+	color: #767676;
 	border-bottom: 2px solid var(--second-color);
+	border-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png") 30 stretch;
+	border-image: url("https://gameboss.eu/wp-content/uploads/2019/04/34-asana-color-gradient.jpg") 30 stretch;
 }
 
 h6.TitleName {
@@ -24,37 +26,37 @@ h6.TitleName {
 	text-align: center;
 	color: var(--bg-color);
 	border-bottom: 1px solid var(--table-color);
+	border-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png") 30 stretch;
 }
 
 /**/
-
-
 
 .ManageContainer {
 	display: flex;
 	justify-content: center;
 	width: 80vw;
 	margin: 2.5vh auto;
-	box-shadow: 10px 5px 39px -4px rgba(0,0,0,0.75);
+	box-shadow: 10px 5px 39px -4px rgba(0, 0, 0, 0.18);
+	border: 5px solid;
+	/*
+	border-image: url("https://gameboss.eu/wp-content/uploads/2019/04/34-asana-color-gradient.jpg") 30 stretch;
+	*/
+	border-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png") 30 stretch;
 }
 
 .LeftProfileNav {
-	color: var(--main-color);
 }
 
-.LeftProfileNav {
+.LeftProfileNav ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
 }
-
-	.LeftProfileNav ul {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		height: 100%;
-	}
 
 .nav-link:hover {
-	background-color: #333;
-	border-bottom: 5px solid #ffa900;
+	border-bottom: 5px solid #0085ff;
+	border-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png") 30 stretch;
 }
 
 .nav-link {
@@ -66,8 +68,9 @@ h6.TitleName {
 	width: 20vw;
 	text-transform: uppercase;
 	font-family: arial;
-	background-color: var(--table-color);
+	background-color: #50505014;
 	border-bottom: 5px solid #aaa;
+	border-image: url("https://gameboss.eu/wp-content/uploads/2019/04/34-asana-color-gradient.jpg") 30 stretch;
 }
 
 .col-md-6 {
@@ -76,25 +79,26 @@ h6.TitleName {
 	padding: 0 2.5vw 5vh 2.5vw;
 }
 
-	.col-md-6 h4 {
-		font-size: 1.5em;
-		color: Var(--table-color);
-		font-family: arial;
-		text-transform: uppercase;
-		text-align: center;
-		padding-bottom: 2vh;
-		border-bottom: 5px solid var(--bg-color);
-	}
+.col-md-6 h4 {
+	font-size: 1.5em;
+	color: #333;
+	font-family: arial;
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 2vh;
+	border-bottom: 5px solid var(--bg-color);
+	border-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png") 30 stretch;
+}
 
-	.col-md-6 form {
-		display: flex;
-		flex-direction: column;
-		width: 50vw;
-		font-size: 1.25em;
-	}
+.col-md-6 form {
+	display: flex;
+	flex-direction: column;
+	width: 50vw;
+	font-size: 1.25em;
+}
 
 .custom-file {
-	color: black;
+	color: #333;
 	padding: .5vh;
 	width: 100%;
 }
@@ -104,7 +108,7 @@ h6.TitleName {
 }
 
 .form-row label {
-	color: Var(--table-color);
+	color: #848484;
 	font-weight: 600;
 }
 
@@ -118,6 +122,9 @@ h6.TitleName {
 
 .newActive {
 	border-bottom: 5px solid Var(--second-color);
+	/*add active color
+	border-image: url("https://gameboss.eu/wp-content/uploads/2019/04/34-asana-color-gradient.jpg") 30 stretch;
+	*/
 	color: Var(--second-color);
 	background-color: Var(--table-color);
 }
@@ -126,7 +133,8 @@ h6.TitleName {
 	box-shadow: none;
 	border: none;
 	background-color: #00000000;
-	border-bottom: 3px solid var(--table-color)
+	border-bottom: 3px solid var(--table-color);
+	border-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png") 30 stretch;
 }
 
 .myLabel {
