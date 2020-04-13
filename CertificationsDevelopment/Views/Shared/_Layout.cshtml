@@ -41,7 +41,7 @@
 							</a>
 						</li>
 						<li class="navitem">
-							<a asp-area="" asp-controller="Certifications" asp-action="Index">Certifications</a>
+							<a asp-area="" asp-controller="Certifications" asp-action="Index">Certificates</a>
 						</li>
 						<li class="navitem">
 							<a  asp-area="" asp-controller="Home" asp-action="Privacy">About</a>
@@ -49,10 +49,10 @@
 						@if(User.Identity.IsAuthenticated) {
 
 						<li class="navitem">
-							<a  asp-area="" asp-controller="Create" asp-action="CreateCertifications">Add Certification</a>
+							<a  asp-area="" asp-controller="Create" asp-action="CreateCertifications">Add Certificate</a>
 						</li>
 						<li class="navitem">
-							<a asp-area="" asp-controller="Create" asp-action="ListEditCertifications">Update Certifications</a>
+							<a asp-area="" asp-controller="Create" asp-action="ListEditCertifications">Update Certificate</a>
 						</li>
 
 						}
