@@ -1,11 +1,16 @@
 ﻿body {
 	background-color: #dbd9d9;
+	background: url("https://images.unsplash.com/photo-1495539406979-bf61750d38ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+	background-size: cover;
 }
+
+
 
 .Header {
 	text-align: center;
 	font-family: arial;
 	text-transform: uppercase;
+	color: #38aae5;
 }
 
 .LogReg {
@@ -17,12 +22,12 @@
 	box-shadow: 10px 5px 39px -4px rgba(0,0,0,0.75);
 	width: 50vw;
 	margin: auto;
-	background-color: #E8F0FE;
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
 	.LogRegPart1 h4 {
 		font-family: arial;
-		color: var(--table-color);
+		color: #7e6eee;
 	}
 
 	.LogRegPart1 a {
@@ -47,18 +52,17 @@
 }
 
 .LogRegPart1 button {
-	width: 41.5vw;
-	height: 5vh;
 	border: none;
-	background-color: var(--table-color);
+	padding: 0;
 	color: var(--main-color);
-	border-bottom: 3px solid;
-	text-transform: uppercase;
-	font-size: 1.25em;
+	background-color: #00c2ffc7;
+	height: 5vh;
+	width: 50%;
 }
 
 	.LogRegPart1 button:hover {
-		background-color: var(--bg-color);
+		border: 3px solid red;
+		border-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png") 30 stretch;
 		cursor: pointer;
 	}
 
@@ -84,20 +88,19 @@
 	.field input {
 		border: none;
 		margin: 0vh 4.5vw;
-		border-bottom: 2px solid var(--table-color);
+		border-bottom: 3px solid var(--table-color);
+		border-image: url("https://gameboss.eu/wp-content/uploads/2019/04/34-asana-color-gradient.jpg") 30 stretch;
 		padding: 0 1px;
 		height: 100%;
 		width: 30vw;
+		background-color: transparent;
 	}
 
 
 .LoginPart2, .LogRegPart2 {
-	display: none; /*for login atleast*/
+	display: none;
 }
 
-.RegisterPart1 input {
-	background-color: #E8F0FE;
-}
 
 @media only screen and (max-width: 900px) {
 

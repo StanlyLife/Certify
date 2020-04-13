@@ -25,9 +25,11 @@
 		Bootcamp,
 		CodeAcademy,
 		Coursera,
+		Employer,
 		KhanAcademy,
 		Linkedin,
 		PluralSight,
+		School,
 		SkillShare,
 		Treehouse,
 		Udemy
