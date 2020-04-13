@@ -362,3 +362,4 @@ C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\obj\Debug\netcoreapp3.1\CertificationsDevelopment.pdb
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\obj\Debug\netcoreapp3.1\CertificationsDevelopment.genruntimeconfig.cache
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\bin\Debug\netcoreapp3.1\appsettings.Development.json
