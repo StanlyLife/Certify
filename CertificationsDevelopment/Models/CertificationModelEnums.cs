@@ -1,17 +1,35 @@
 ﻿namespace CertificationsDevelopment.Models {
 		public enum Subject {
-			Programming,
-			Management,
+			Academics,
+			Business,
+			Creative,
 			CustomerService,
+			Design,
+			Development,
+			Finance,
+			Fitness,
+			IT,
+			Lifestyle,
+			Management,
+			Marketing,
+			Music,
+			PersonalDevelopment,
+			Programming,
 			Sales,
-			InformationTechnology
+			School,
+			Technology
 		}
 
 	public enum Site {
-		Udemy,
+		Other,
+		Bootcamp,
+		CodeAcademy,
+		Coursera,
+		KhanAcademy,
 		Linkedin,
 		PluralSight,
-		Coursera,
-		Other	
+		SkillShare,
+		Treehouse,
+		Udemy
 		}
 	}
