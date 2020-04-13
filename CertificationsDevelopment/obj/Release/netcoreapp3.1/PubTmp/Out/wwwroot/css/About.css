@@ -1,24 +1,23 @@
 ﻿body {
-	background-image: url(/Images/preset1.jpg);
-	background-size: 100%;
-	background-repeat: repeat-y;
+	background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+	background-size: cover;
 }
 
 .wrapper a:hover {
-	color: var(--third-color);
+	color: #fe636b;
 }
 
 .wrapper a {
-	color: #7f7f7f;
+	color: #f6ae04;
 }
 
 .wrapper {
-	background-color: var(--table-color);
-	border-top: 15px solid var(--bg-color);
-	border-bottom: 25px solid var(--second-color);
+	background-color: #3333339c;
+	border: 5px solid var(--second-color);
+	border-image: url("https://gameboss.eu/wp-content/uploads/2019/04/34-asana-color-gradient.jpg") 30 stretch;
 	box-shadow: 2px 2px 49px -6px rgba(0,0,0,0.75);
 	width: 55vw;
-	margin: auto;
+	margin: 5vh auto;
 	margin-top: 15vh;
 	text-align: center;
 	font-family: arial;
