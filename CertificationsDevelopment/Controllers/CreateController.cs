@@ -196,15 +196,15 @@ namespace CertificationsDevelopment.Controllers
         }
 
         public CertificationsModel UpdateCertification(CertificationsModel newCertification, int CertificationId) {
-            var Certification = certData.GetById(CertificationId);
-            Certification.CertName = newCertification.CertName;
-            Certification.CertSubject = newCertification.CertSubject;
-            Certification.CertSite = newCertification.CertSite;
-            Certification.CertDescription = newCertification.CertDescription;
-            Certification.CertUrl = newCertification.CertUrl;
-
-
-            certData.Update(Certification);
+            //var Certification = certData.GetById(CertificationId);
+            //Certification.CertName = newCertification.CertName;
+            //Certification.CertSubject = newCertification.CertSubject;
+            //Certification.CertSite = newCertification.CertSite;
+            //Certification.CertDescription = newCertification.CertDescription;
+            //Certification.CertUrl = newCertification.CertUrl;
+            TryUpdateModelAsync(newCertification);
+            newCertification.Author = User.Identity.Name;
+            certData.Update(newCertification);
             certData.Commit();
             TempData["Message"] = $"Certification '{Certification.CertName}' Updated!";
             return Certification;
