@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CertificationsDevelopment.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200401044848_FinalMigration")]
-    partial class FinalMigration
+    [Migration("20200414082209_finalMigration")]
+    partial class finalMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

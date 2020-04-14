@@ -7,6 +7,15 @@
 	<UserSecretsId>aspnet-CertificationsDevelopment-DADA6C23-3F0C-460C-8D9D-EC1C37C7D876</UserSecretsId>
   </PropertyGroup>
 
+
+
+	<ItemGroup>
+	  <Compile Remove="wwwroot\NewFolder\**" />
+	  <Content Remove="wwwroot\NewFolder\**" />
+	  <EmbeddedResource Remove="wwwroot\NewFolder\**" />
+	  <None Remove="wwwroot\NewFolder\**" />
+	</ItemGroup>
+
   <ItemGroup>
 	<Compile Remove="Data\Migrations\20200322023721_updateCertifications.cs" />
 	<Compile Remove="Data\Migrations\20200322023721_updateCertifications.Designer.cs" />
@@ -27,7 +36,9 @@
 	<Compile Remove="Data\Migrations\20200329022537_userModel.cs" />
 	<Compile Remove="Data\Migrations\20200329022537_userModel.Designer.cs" />
 	<Compile Remove="Data\Migrations\20200330013059_UpdateProfile.cs" />
-	<Compile Remove="Data\Migrations\20200330013059_UpdateProfile.Designer.cs" /> 
+	<Compile Remove="Data\Migrations\20200330013059_UpdateProfile.Designer.cs" />
+	<Compile Remove="Data\Migrations\20200401044848_FinalMigration.cs" />
+	<Compile Remove="Data\Migrations\20200401044848_FinalMigration.Designer.cs" /> 
   </ItemGroup>
 
 
@@ -46,7 +57,6 @@
 
   <ItemGroup>
 	<Folder Include="wwwroot\icons\" />
-	<Folder Include="wwwroot\NewFolder\" />
 	<Folder Include="wwwroot\videos\" />
 	<Folder Include="wwwroot\temp\" />
   </ItemGroup>
