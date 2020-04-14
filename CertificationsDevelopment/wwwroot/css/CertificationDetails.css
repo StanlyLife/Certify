@@ -42,7 +42,33 @@ img.img-fluid {
 	margin: auto;
 }
 
+
+tbody tr {
+	display: flex;
+	height: 5vh;
+	width: 100%;
+	border-bottom: 3px solid #4e4e4ed1;
+}
+
+
+tbody td {
+	width: 100%;
+	display: flex;
+	margin: 0 2px;
+	align-items: center;
+	overflow: hidden;
+}
+
+
 @media only screen and (max-width: 900px) {
+	.DetailsHeader {
+		font-size: .5em;
+	}
+
+	tbody {
+		font-size: .5em;
+	}
+
 	#pdf {
 		padding: 1vh 5%;
 		width: 90%;

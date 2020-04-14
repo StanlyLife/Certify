@@ -81,11 +81,31 @@
 
 		@foreach (var x in Model.Certifications) {
 			<tr>
-				<td id="CertName">@x.CertName</td>
-				<td id="CertDescription">@x.CertDescription</td>
-				<td id="CertSubject">@x.CertSubject</td>
-				<td id="CertSite">@x.CertSite</td>
-				<td id="CertAuthor">@x.Author</td>
+				<td id="CertName">
+					<p>
+				@x.CertName
+					</p>
+				</td>
+				<td id="CertDescription">
+					<p>
+				@x.CertDescription
+					</p>
+				</td>
+				<td id="CertSubject">
+					<p>
+				@x.CertSubject
+					</p>
+				</td>
+				<td id="CertSite">
+					<p>
+				@x.CertSite
+					</p>
+				</td>
+				<td id="CertAuthor">
+					<p>
+				@x.Author
+					</p>
+				</td>
 
 				<td id="CertView">
 					<a asp-controller="Certifications" asp-action="Details" asp-route-id="@x.Id" name="View">

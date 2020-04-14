@@ -11,3 +11,13 @@
 		color: #05a6fd;
 		text-transform: uppercase;
 	}
+
+
+@media only screen and (max-width: 900px) {
+
+
+
+	table {
+		font-size: .5em;
+	}
+}
