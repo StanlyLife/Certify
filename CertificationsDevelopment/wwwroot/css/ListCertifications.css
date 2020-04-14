@@ -23,30 +23,30 @@ table {
 
 	table td {
 		width: 100%;
-		padding-top: 2.2vh;
-		padding-bottom: 2.2vh;
-		border-bottom: 3px solid #00000033;
-		word-break: keep-all;
+		padding: 2.25vh 2px;
+		border-bottom: 3px solid #4e4e4ed1;
+		display: inline-block;
 		text-overflow: ellipsis;
+		-ms-word-break: keep-all;
+		/* This is the dangerous one in WebKit, as it breaks things wherever */
+		word-break: keep-all;
+		/* Instead use this non-standard one: */
+		word-break: keep-all;
+		line-break: none;
+		white-space: nowrap;
+		overflow: hidden;
+		height: 5vh;
 	}
 
 
 
 	table tr {
-		overflow: hidden;
 		display: flex;
-		flex-basis: 16.6%;
-		height: 7vh;
+		height: 10vh;
+		overflow: hidden;
 	}
 
-#CertDescription {
-	overflow: hidden;
-}
 
-#CertName {
-	overflow: hidden;
-	text-align: left;
-}
 
 thead {
 	background-color: var(--table-color);
@@ -80,11 +80,10 @@ thead {
 
 	tr td {
 		font-weight: 100;
-		font-family: times;
-		word-break: keep-all;
-		font-size: .4em;
-		width: 90vw;
+		font-size: .5em;
+		width: 100%;
 		height: 1vh;
+		white-space: normal;
 	}
 
 	#CertName {
