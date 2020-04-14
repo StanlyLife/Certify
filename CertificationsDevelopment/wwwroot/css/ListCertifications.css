@@ -21,38 +21,42 @@ table {
 	text-align: center;
 }
 
-	table td {
-		width: 100%;
-		padding: 2.25vh 2px;
-		border-bottom: 3px solid #4e4e4ed1;
-		display: inline-block;
-		text-overflow: ellipsis;
-		-ms-word-break: keep-all;
-		/* This is the dangerous one in WebKit, as it breaks things wherever */
-		word-break: keep-all;
-		/* Instead use this non-standard one: */
-		word-break: keep-all;
-		line-break: none;
+tbody tr {
+	display: flex;
+	height: 5vh;
+	width: 100%;
+	border-bottom: 3px solid #4e4e4ed1;
+}
+
+
+tbody td {
+	width: calc(100% / 6);
+	display: flex;
+	margin: 0 2px;
+	align-items: center;
+	overflow: hidden;
+}
+
+	tbody td p {
+		min-width: 100%;
 		white-space: nowrap;
+		font-size: 1rem;
 		overflow: hidden;
-		height: 5vh;
+		text-overflow: ellipsis;
 	}
 
-
-
-	table tr {
+	tbody td#CertView {
 		display: flex;
-		height: 10vh;
-		overflow: hidden;
+		align-items: center;
+		justify-content: center;
 	}
-
 
 
 thead {
 	background-color: var(--table-color);
 	border-top: 5px solid var(--main-color);
-	padding: 1vh 5%;
-	width: 90%;
+	padding: 1vh 0;
+	width: 100%;
 	color: #00a5fd;
 	font-size: 1em;
 	text-transform: uppercase;
@@ -64,43 +68,41 @@ thead {
 	}
 
 	thead th {
+		width: 100%;
+		margin: 0 2px;
 		display: flex;
-		flex-basis: 25%;
 		align-items: center;
 		justify-content: center;
+		overflow: hidden;
 	}
 
 @media only screen and (max-width: 900px) {
 
 	.TableWrapper {
-		padding: 2vh 1vw;
-		width: 95vw;
-	}
-
-
-	tr td {
-		font-weight: 100;
-		font-size: .5em;
-		width: 100%;
-		height: 1vh;
-		white-space: normal;
-	}
-
-	#CertName {
-		font-weight: 700;
-	}
-
-	tr td img {
-		margin: 0;
 		padding: 0;
-		height: 1vh;
+		margin: 5vh 0 2vh 0;
+		width: 100vw;
 	}
 
-	#CertDescription, #CertSite {
+	.table {
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
+	}
+
+	tbody tr td p {
+		font-size: .75em;
+	}
+
+	thead tr {
+		font-size: .75em;
+	}
+
+	#CertDescription, #CertSubject {
 		display: none;
 	}
 
-	#TableDefiner {
-		font-size: 15px;
+	tbody td {
+		width: calc(100% / 4);
 	}
 }
