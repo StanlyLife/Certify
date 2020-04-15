@@ -29,3 +29,8 @@ i tried to stay away from third party dependencies as i wanted to learn more abo
 * the third issue is still here and i am not sure how to fix it. I tried to work out most of the audits flaws, but i am not to familiar with http protocols nor do i plan on spending time learning about it until i feel comfortable with .NET
 
 ![img](https://i.gyazo.com/6dd2489f907c4df0dbaaa6941ef72a1e.png)
+
+
+#### Hosting
+
+this website is hosted at interserver.com using a plesk controll panel and IIS hosting
