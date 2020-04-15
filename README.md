@@ -33,4 +33,5 @@ i tried to stay away from third party dependencies as i wanted to learn more abo
 
 #### Hosting
 
-this website is hosted at interserver.com using a plesk controll panel and IIS hosting
+* this website is hosted at interserver.com using a plesk controll panel and IIS hosting
+* SSL certificate recieved from letsencrypt
