@@ -26,18 +26,17 @@ namespace CertificationsDevelopment {
 			services.AddScoped<IUserProfileData, SqlUserProfileData>();
 
 			services.AddTransient<IEmailSender, EmailSender>();
-			//services.Configure<AuthMessageSenderOptions>(Configuration);
+			services.Configure<AuthMessageSenderOptions>(Configuration.GetSection(nameof(AuthMessageSenderOptions)));
 
-			services.Configure<IdentityOptions>(options => {
+			services.Configure<IdentityOptions>(options =>
+			{
 				options.SignIn.RequireConfirmedAccount = false;
 				options.SignIn.RequireConfirmedEmail = false;
 				options.SignIn.RequireConfirmedPhoneNumber = false;
 
 				options.Password.RequireNonAlphanumeric = false;
-				
+
 			});
-
-
 
 			services.AddDbContext<ApplicationDbContext>(options =>
 				options.UseSqlServer(
