@@ -28,7 +28,7 @@ namespace CertificationsDevelopment {
 			services.AddScoped<IUserProfileData, SqlUserProfileData>();
 
 			services.AddTransient<IEmailSender, EmailSender>();
-			//services.Configure<AuthMessageSenderOptions>(Configuration);
+
 			services.Configure<AuthMessageSenderOptions>(Configuration.GetSection(nameof(AuthMessageSenderOptions)));
 
 			services.Configure<IdentityOptions>(options => {
