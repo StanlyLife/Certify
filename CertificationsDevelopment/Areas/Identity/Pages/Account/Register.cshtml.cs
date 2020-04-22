@@ -16,11 +16,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 
-namespace CertificationsDevelopment.Areas.Identity.Pages.Account
-{
+namespace CertificationsDevelopment.Areas.Identity.Pages.Account {
+
 	[AllowAnonymous]
-	public class RegisterModel : PageModel
-	{
+	public class RegisterModel : PageModel {
 		private readonly SignInManager<IdentityUser> _signInManager;
 		private readonly UserManager<IdentityUser> _userManager;
 		private readonly ILogger<RegisterModel> _logger;
@@ -31,8 +30,7 @@ namespace CertificationsDevelopment.Areas.Identity.Pages.Account
 			UserManager<IdentityUser> userManager,
 			SignInManager<IdentityUser> signInManager,
 			ILogger<RegisterModel> logger,
-			IEmailSender emailSender, IUserProfileData profileData)
-		{
+			IEmailSender emailSender, IUserProfileData profileData) {
 			_userManager = userManager;
 			_signInManager = signInManager;
 			_logger = logger;
@@ -47,8 +45,8 @@ namespace CertificationsDevelopment.Areas.Identity.Pages.Account
 
 		public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
-		public class InputModel
-		{
+		public class InputModel {
+
 			[Required]
 			[EmailAddress]
 			[Display(Name = "Email")]
@@ -66,19 +64,16 @@ namespace CertificationsDevelopment.Areas.Identity.Pages.Account
 			public string ConfirmPassword { get; set; }
 		}
 
-		public async Task OnGetAsync(string returnUrl = null)
-		{
+		public async Task OnGetAsync(string returnUrl = null) {
 			ReturnUrl = returnUrl;
 			ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 		}
 
-		public async Task<IActionResult> OnPostAsync(string returnUrl = null)
-		{
+		public async Task<IActionResult> OnPostAsync(string returnUrl = null) {
 			returnUrl = returnUrl ?? Url.Content("~/");
 			ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-			if (ModelState.IsValid)
-			{
-				var user = new IdentityUser { UserName = Input.Email, Email = Input.Email, EmailConfirmed = true };
+			if (ModelState.IsValid) {
+				var user = new IdentityUser { UserName = Input.Email, Email = Input.Email, EmailConfirmed = false };
 				var result = await _userManager.CreateAsync(user, Input.Password);
 				if (result.Succeeded) {
 					_logger.LogInformation("User created a new account with password.");
@@ -97,6 +92,7 @@ namespace CertificationsDevelopment.Areas.Identity.Pages.Account
 					await _signInManager.SignInAsync(user, isPersistent: true);
 
 					#region add userProfile on registration
+
 					UserProfile userProfile = new UserProfile();
 					userProfile.UserKey = user.Id;
 					userProfile.FirstName = "First name";
@@ -106,13 +102,12 @@ namespace CertificationsDevelopment.Areas.Identity.Pages.Account
 					userProfile.email = user.Email;
 					profileData.Add(userProfile);
 					profileData.Commit();
-					#endregion
+
+					#endregion add userProfile on registration
+
 					return LocalRedirect(returnUrl);
-					
-					
 				}
-				foreach (var error in result.Errors)
-				{
+				foreach (var error in result.Errors) {
 					ModelState.AddModelError(string.Empty, error.Description);
 				}
 			}
