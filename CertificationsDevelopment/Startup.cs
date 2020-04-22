@@ -12,7 +12,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace CertificationsDevelopment {
+
 	public class Startup {
+
 		public Startup(IConfiguration configuration) {
 			Configuration = configuration;
 		}
@@ -27,6 +29,7 @@ namespace CertificationsDevelopment {
 
 			services.AddTransient<IEmailSender, EmailSender>();
 			//services.Configure<AuthMessageSenderOptions>(Configuration);
+			services.Configure<AuthMessageSenderOptions>(Configuration.GetSection(nameof(AuthMessageSenderOptions)));
 
 			services.Configure<IdentityOptions>(options => {
 				options.SignIn.RequireConfirmedAccount = false;
@@ -34,10 +37,7 @@ namespace CertificationsDevelopment {
 				options.SignIn.RequireConfirmedPhoneNumber = false;
 
 				options.Password.RequireNonAlphanumeric = false;
-				
 			});
-
-
 
 			services.AddDbContext<ApplicationDbContext>(options =>
 				options.UseSqlServer(
