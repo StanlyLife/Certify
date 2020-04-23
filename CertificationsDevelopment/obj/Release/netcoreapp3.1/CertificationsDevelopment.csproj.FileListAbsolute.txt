@@ -309,7 +309,6 @@ C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\obj\Release\netcoreapp3.1\CertificationsDevelopment.csprojAssemblyReference.cache
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\obj\Release\netcoreapp3.1\CertificationsDevelopment.csproj.CoreCompileInputs.cache
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\obj\Release\netcoreapp3.1\CertificationsDevelopment.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\obj\Release\netcoreapp3.1\CertificationsDevelopment.MvcApplicationPartsAssemblyInfo.cache
@@ -363,3 +362,4 @@ C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\bin\Release\netcoreapp3.1\web.config
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\bin\Release\netcoreapp3.1\appsettings.Development.json
 C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\bin\Release\netcoreapp3.1\appsettings.json
+C:\Users\stian\source\repos\.NET Repos\Certify\Certify\CertificationsDevelopment\obj\Release\netcoreapp3.1\CertificationsDevelopment.csprojAssemblyReference.cache
